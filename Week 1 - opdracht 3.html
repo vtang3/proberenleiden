@@ -1,0 +1,41 @@
+
+Opdracht 3<br><br>
+<script>
+		var boodschap = [];
+
+	function plus(){
+		
+		var product = document.getElementById("product").value;
+		var hoeveelheid = document.getElementById("hoeveelheid").value;
+		var lijst = document.getElementById("lijst");
+		
+		boodschap.push(product + " ( " + hoeveelheid + " ) " + "<br>");
+		lijst.innerHTML = boodschap;
+
+			for (var i = 0; i < boodschap.length; i++){
+				lijst = boodschap.join(" ");
+
+}
+
+
+}
+
+    	function refresh(){
+        	boodschap = [];
+        	lijst.innerHTML = boodschap;
+
+}
+
+</script>
+
+<style>
+
+</style>
+
+<input type=text text id=product placeholder="product">
+<input type=text text id=hoeveelheid placeholder="hoeveelheid">
+<input type=button onclick="plus()" value="+">
+
+<br><br><div id="lijst"> (Lijst is leeg)</div>
+
+<br><input type="button" id="refresh" value="Nieuwe lijst" onclick="refresh()">

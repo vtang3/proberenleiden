@@ -1,0 +1,36 @@
+Opdracht 1 <br><br>
+<script>
+
+
+
+	function welkomsttekst(){
+		var voornaam = document.getElementById("voornaam").value;
+		var achternaam = document.getElementById("achternaam").value;
+		var geboortedatum = document.getElementById("geboortedatum").value;
+		
+		var welkom = document.getElementById("deDiv");
+		welkom.innerHTML = "Dag " + voornaam + " " + achternaam + " fijn dat je op " + geboortedatum + " geboren bent.";
+			alert(welkom.innerHTML);
+
+
+}
+
+</script>
+
+<style>
+
+
+</style>
+
+
+<input type=text id="voornaam" placeholder=Voornaam>
+
+<input type=text id="achternaam" placeholder=Achternaam>
+
+<input type=text id="geboortedatum" placeholder=Geboortedatum>
+
+<input type=button onclick="welkomsttekst()" value="klik mij">
+
+<br><br><div id=deDiv>Welkom!</div>
+
+<br><br>

@@ -1,0 +1,74 @@
+
+Opdracht 6<br><br>
+
+<script>
+
+
+    var oefening = ["Donkey kicks", "Burpee", "Jumping Jack"]
+    var sets = [1, 2, 3, 4, 5]
+    var reps = [5, 10, 15, 20]
+    function setGround() {
+        var workout = document.getElementById("workout");
+    }
+    document.onload = setGround();
+    /* ----------------------------------------------------------------------------------- */
+    function geefRandom(x) {     
+        var y = Math.floor(Math.random() * x.length);
+        return x[y];
+    }
+    function geefOefening() {   
+        workout.innerHTML = workout.innerHTML + geefRandom(oefening);
+
+    }
+    function geefSets() {       
+        workout.innerHTML = workout.innerHTML + " / " + geefRandom(sets) + " sets";
+
+    }
+    function geefReps() {        
+        workout.innerHTML = workout.innerHTML + " / " + geefRandom(reps) + " reps" + "<br>";
+
+    }
+</script>
+
+<style>
+
+    	h1 {
+        	font-size: 24px;
+        	color: white;
+    }
+
+    	#app {
+        	position: fixed;
+        	width: 300px;
+        	height: 300px;
+        	padding-top: 10px;
+        	text-align: center;
+        	background-color: black;
+		border-radius: 25px;
+    }
+
+    	#workout {
+        	padding-top: 15px;
+		border-radius: 0px 0px 25px 25px;
+        	background-color: grey;
+        	font-size: 18px;
+        	color: white;
+        	height: inherit;
+    }
+
+</style>
+
+<div id="app">
+    <h1>Workout time!</h1><br>
+
+    <div id="workout">
+        <input type=button id="oefening" onclick="geefOefening()" value="Oefening">
+        <input type=button id="sets" onclick="geefSets()" value="Sets">
+        <input type=button id="reps" onclick="geefReps()" value="Reps">
+        <br><br>
+    </div>
+
+
+
+</div>
+

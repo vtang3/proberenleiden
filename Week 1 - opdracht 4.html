@@ -1,0 +1,45 @@
+
+Opdracht 4<br><br>
+
+Kassa <br><br>
+
+<script>
+
+    
+	var prijzen = [1.80, 2.50, 1.50, 0.80, 0.50];
+    	var totaal = [];
+    	
+	function count(x){
+        
+	var y = 0
+        for (var i = 0; i < x.length; i++) {
+            y = y + x[i]
+        }
+        return(y)
+    }
+    	count(totaal)
+  
+/*
+    	function getSum(total, num) {
+        return total + Math.round(num);  //totaal.reduce(getSum, 0);
+    }
+*/
+    	function optellen(prijs) {
+        totaal.push(prijzen[prijs]);
+        document.getElementById("totaalDiv").innerHTML = "Totaal:" + " € " + count(totaal);
+        console.log(totaal);
+    }
+
+
+ </script>
+
+<style></style>
+
+<input type=button id="boter" onclick="optellen([0])" value="Boter">
+<input type=button id="kaas" onclick="optellen([1])" value="Kaas">
+<input type=button id="eieren" onclick="optellen([2])" value="Eieren">
+<input type=button id="melk" onclick="optellen([3])" value="Melk">
+<input type=button id="water" onclick="optellen([4])" value="Water">
+
+<br><br>
+<div id="totaalDiv"> € - </div>

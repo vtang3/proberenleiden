@@ -1,0 +1,45 @@
+<html>
+	<head>
+<script>
+
+function stoplicht(){
+    var kleuren = ["red", "orange", "green"];
+    var nummer = 0
+    var cirkel1 = document.getElementById("cirkel1");
+        cirkel1.style.backgroundColor = kleuren[nummer]      
+        nummer = nummer + 1;                               
+        		console.log(nummer);
+        
+		if(nummer > 2){                                     
+            	nummer = 0;
+        }
+	
+}
+
+</script>
+
+<style> 
+
+    span {
+        display: block;
+        border: 1px solid black;
+        height: 40px;
+        width: 40px;
+	    border-radius: 50px;
+    }
+
+
+
+</style>
+
+</head>
+<body>
+<span id=cirkel1> </span>
+<span id=cirkel2> </span>
+<span id=cirkel3> </span>
+    <br>
+    <input type=button onclick="stoplicht()" value="klik op mij">
+    
+</body>
+
+</html>

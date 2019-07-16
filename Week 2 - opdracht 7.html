@@ -1,0 +1,72 @@
+  <html>
+    <head>   
+        <script>
+        
+        var parkeerkosten = 10.00;
+    
+        function betaaldCheck(deMunt){
+            if((parkeerkosten - deMunt) <= 0){
+                parkeerkosten = "0. Bedankt en tot ziens!";
+                console.log(parkeerkosten);
+                printParkeerkosten();
+            }else{
+                betalen(deMunt);
+            }
+        }
+        function betalen(munt) {
+            console.log(munt);
+            switch(munt){
+                case 2:
+                    parkeerkosten = parkeerkosten - 2;
+                    console.log(parkeerkosten);
+                    printParkeerkosten();
+                    break;
+                case 1:
+                    parkeerkosten = parkeerkosten - 1;
+                    console.log(parkeerkosten);
+                    printParkeerkosten();
+                    break;
+                case 0.50:
+                    parkeerkosten = parkeerkosten - 0.50;
+                    console.log(parkeerkosten);
+                    printParkeerkosten();
+                    break;
+                    
+                case 0.20:
+                    parkeerkosten = parkeerkosten - 0.20;
+                    console.log(parkeerkosten);
+                    printParkeerkosten();
+                    break;
+                case 0.10:
+                    parkeerkosten = parkeerkosten - 0.10;
+                    console.log(parkeerkosten);
+                    printParkeerkosten();
+            }
+        }
+        function printParkeerkosten(){
+            var kostendisplayDiv = document.getElementById("kostendisplay");
+            kostendisplayDiv.innerHTML = "Nog te betalen: €" + parkeerkosten;
+        }
+        </script>
+        <style>
+        div {
+            border: 1px solid black;
+            margin: 5px;
+            padding: 10px;
+            height: 40px;
+            width: 160px;
+        }
+        </style>
+    </head>
+    <body>
+        Parkeerautomaat<br><br>
+        <div id=kostendisplay> Nog te betalen: 10,00 </div><br>
+
+        <button onclick=betaaldCheck(2)> € 2 </button>
+        <button onclick=betaaldCheck(1)> € 1 </button>
+        <button onclick=betaaldCheck(0.50)> € 0,50 </button>
+        <button onclick=betaaldCheck(0.20)> € 0,20 </button>
+        <button onclick=betaaldCheck(0.10)> € 0,10 </button>
+       
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+	<head>
+<script>
+
+    var score = 0
+
+    function check(){
+            var antwoord1 = document.getElementById("goed1");
+            var antwoord2 = document.getElementById("goed2");
+            var antwoord3 = document.getElementById("goed3");
+
+            var gewonnen = document.getElementById("deDiv");
+
+            if (antwoord1.checked) {
+                score = score + 1;
+                console.log(score)
+            }
+            if (antwoord2.checked) {
+                score = score + 1;
+                console.log(score)
+            }
+            if (antwoord3.checked) {
+                score = score + 1;
+                console.log(score)
+            }
+
+            var gewonnen = document.getElementById("deDiv");
+
+            if (score == 3) {
+                gewonnen.innerHTML = "Gewonnen!";
+            } else {
+                gewonnen.innerHTML = "Verloren!";
+            }
+    }
+   
+ 		</script>
+
+<style> 
+
+
+
+</style>
+
+</head>
+<body>
+
+<h1>Quiz</h1>
+Een stoplicht bestaat uit 3 kleuren:<br>
+<input type="checkbox" id="goed1"> Waar
+<br><input type="checkbox"> Niet waar
+
+<br><br> De Nederlandse vlag bestaat uit 2 kleuren 
+<br><input type="checkbox"> Waar
+<br><input type="checkbox" id="goed2"> Niet waar
+
+<br><br> Egypte ligt in Afrika 
+<br><input type="checkbox" id="goed3"> Waar
+<br><input type="checkbox"> Niet waar
+
+<br><br>
+<input type=button onclick="check()" value="check score!"><br><br>
+<div id="deDiv"> Heb je gewonnen? </div>
+
+</body>
+
+</html>

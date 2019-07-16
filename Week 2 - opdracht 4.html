@@ -1,0 +1,56 @@
+<html>
+	<head>
+<script>
+	function start(){
+        var input = document.getElementById("invoer");
+        var evenKolom = document.getElementById("even");
+        var onevenKolom = document.getElementById("oneven");
+
+        if (input.value %2 == 0){
+            evenKolom.innerHTML = evenKolom.innerHTML + "<br>" + input.value;
+        }
+        else{
+            onevenKolom.innerHTML = onevenKolom.innerHTML + "<br>" + input.value;
+        }
+
+        input.value ="";
+}
+
+   
+ 		</script>
+
+<style> 
+    #even{
+        border-block:inherit;
+        border: 1px solid black;
+        width: 200px;
+    }
+    #oneven{
+        border-block:inherit;
+        border: 1px solid black;
+        width: 200px;
+    }
+
+
+</style>
+
+</head>
+<body>
+
+
+<input type=text id="invoer" placeholder="voer getal in"></textfield>
+<input type=button onclick="start()" value="invoeren">
+<br><br>
+<div>
+<div id="even"> <b><u>Even getallen:</b></u></div><br>
+<div id="oneven"> <b><u>Oneven getallen:</b></u></div>
+</div>
+
+
+</body>
+
+</html>
+
+
+<br> even/oneven checker
+Controleert invoer getal voor even of oneven en plaatst deze in bijbehorende vakje

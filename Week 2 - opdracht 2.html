@@ -1,0 +1,84 @@
+<html>
+	<head>
+<script>
+
+    var nederland = ["red", "white", "blue"];
+    var duitsland = ["black", "red", "yellow"];
+    var oostenrijk = ["red", "white", "red"];
+
+	function vlag(hetLand){
+            
+        var vak1 = document.getElementById("vak1");
+        vak1.style.backgroundColor = hetLand[0];
+            console.log(vak1);
+
+        var vak2 = document.getElementById("vak2");
+        vak2.style.backgroundColor = hetLand[1];
+            console.log(vak2);
+
+        var vak3 = document.getElementById("vak3");
+        vak3.style.backgroundColor = hetLand[2];
+            console.log(vak3);
+}
+
+    function random(){
+        var opties = [nederland, duitsland, oostenrijk];
+        var keuze = Math.floor(Math.random() * opties.length);
+
+            vlag(opties[keuze]);
+    }
+
+
+
+
+</script>
+
+<style> 
+    span{
+        display:block;
+        border: 1px solid black;
+        width: 200px;
+        height: 40px;
+    }
+
+
+</style>
+
+</head>
+<body>
+
+<span id=vak1></span>
+<span id=vak2></span>
+<span id=vak3></span>
+
+<br>
+<input type=button onclick="random()" value="Random">
+
+<input type=button onclick="vlag(nederland)" value="Nederland">
+
+<input type=button onclick="vlag(duitsland)" value="Duitsland">
+
+<input type=button onclick="vlag(oostenrijk)" value="Oostenrijk">
+
+
+</body>
+
+</html>
+
+<!-- var vlagNederland = ["red","white","blue"];
+ var vlagDuitsland = ["black","red","yellow"];
+
+
+  function random(){
+var opties = [vlagNederland, vlagDuitsland];
+var keuze = Math.floor(Math.random() * opties.length);
+    var rij1 = document.getElementById("rij1");
+    rij1.style.backgroundColor = opties[keuze][0];
+
+    var rij2 = document.getElementById("rij2");
+    rij2.style.backgroundColor = opties[keuze][1];
+
+    var rij3 = document.getElementById("rij3");
+    rij3.style.backgroundColor = opties[keuze][2];
+  }
+  --!
